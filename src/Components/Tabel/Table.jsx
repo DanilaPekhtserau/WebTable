@@ -4,9 +4,9 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import 'react-bootstrap-table/css/react-bootstrap-table.css'
 
 
-const Table1  = () => {
+const Table1  = ({data}) => {
         return (
-                <BootstrapTable>
+                <BootstrapTable data = {data}>
                     <TableHeaderColumn isKey dataField='id'>
                         ID
                     </TableHeaderColumn>
