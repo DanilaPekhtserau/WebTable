@@ -3,10 +3,23 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 import 'react-bootstrap-table/css/react-bootstrap-table.css'
 
+function onSelectRow(row, isSelected, e) {
+    
+}
+
+const selectRowProp = {
+    mode: 'radio',
+    clickToSelect: true,
+    selected: [1],
+    onSelect: onSelectRow,
+    bgColor: 'gold'
+};
 
 const Table1  = ({data}) => {
         return (
-                <BootstrapTable data = {data} hover>
+                <BootstrapTable data = {data} hover
+                                selectRow={selectRowProp}
+                >
                     <TableHeaderColumn isKey dataField='id'>
                         ID
                     </TableHeaderColumn>
