@@ -3,15 +3,13 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 import 'react-bootstrap-table/css/react-bootstrap-table.css'
 
-function onSelectRow(row, isSelected, e) {
 
-}
+const cellEditProp = { mode: 'click' }
 
 const selectRowProp = {
     mode: 'radio',
     clickToSelect: true,
     selected: [1],
-    onSelect: onSelectRow,
     bgColor: 'gold'
 };
 
@@ -21,6 +19,7 @@ const Table1  = ({data}) => {
                                 selectRow={selectRowProp}
                                 insertRow={true}
                                 deleteRow={true}
+                                cellEdit={cellEditProp}
                 >
                     <TableHeaderColumn isKey dataField='id'>
                         ID
