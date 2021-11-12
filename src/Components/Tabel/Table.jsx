@@ -6,7 +6,7 @@ import 'react-bootstrap-table/css/react-bootstrap-table.css'
 
 const Table1  = ({data}) => {
         return (
-                <BootstrapTable data = {data}>
+                <BootstrapTable data = {data} hover>
                     <TableHeaderColumn isKey dataField='id'>
                         ID
                     </TableHeaderColumn>
