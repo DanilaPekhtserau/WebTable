@@ -4,7 +4,7 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import 'react-bootstrap-table/css/react-bootstrap-table.css'
 
 function onSelectRow(row, isSelected, e) {
-    
+
 }
 
 const selectRowProp = {
@@ -19,6 +19,8 @@ const Table1  = ({data}) => {
         return (
                 <BootstrapTable data = {data} hover
                                 selectRow={selectRowProp}
+                                insertRow={true}
+                                deleteRow={true}
                 >
                     <TableHeaderColumn isKey dataField='id'>
                         ID
