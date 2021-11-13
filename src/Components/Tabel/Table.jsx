@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 import 'react-bootstrap-table/css/react-bootstrap-table.css'
@@ -14,23 +14,24 @@ const selectRowProp = {
 };
 
 const Table1  = ({data}) => {
-        return (
-                <BootstrapTable data = {data} hover
-                                selectRow={selectRowProp}
-                                insertRow={true}
-                                deleteRow={true}
-                                cellEdit={cellEditProp}
-                >
-                    <TableHeaderColumn isKey dataField='id'>
-                        ID
-                    </TableHeaderColumn>
-                    <TableHeaderColumn dataField='name'>
-                        Name
-                    </TableHeaderColumn>
-                    <TableHeaderColumn dataField='value'>
-                        Value
-                    </TableHeaderColumn>
-                </BootstrapTable>
-        );
+    return (
+        <BootstrapTable data = {data}
+                        selectRow={selectRowProp}
+                        insertRow={true}
+                        deleteRow={true}
+                        cellEdit={cellEditProp}
+                        hover
+        >
+            <TableHeaderColumn isKey dataField='id' dataSort>
+                ID
+            </TableHeaderColumn>
+            <TableHeaderColumn dataField='name' dataSort>
+                Name
+            </TableHeaderColumn>
+            <TableHeaderColumn dataField='value' dataSort>
+                Value
+            </TableHeaderColumn>
+        </BootstrapTable>
+    );
 }
 export default Table1;
