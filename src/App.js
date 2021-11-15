@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 import './App.css';
-import Table1 from "./Components/Tabel/Table";
+import Table1 from "./Components/Table/Table";
 
 
 
